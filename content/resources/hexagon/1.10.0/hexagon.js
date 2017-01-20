@@ -8984,7 +8984,6 @@ AutoComplete = (function(superClass) {
       _.menu = menu;
       _.input = input;
     }
-    this;
   }
 
   AutoComplete.prototype.clearCache = function() {
@@ -15310,16 +15309,14 @@ ColorPicker = (function(superClass) {
             }
             return dragging = false;
           };
-          ({
-            dispose: function() {
+          dispose = function() {
               if (disposed) {
                 return;
               }
               this.StopListening(true);
               elem = parent = min = max = startCallback = moveCallback = endCallback = null;
               return disposed = true;
-            }
-          });
+          };
           StartListening = function() {
             if (listening || disposed) {
               return;
