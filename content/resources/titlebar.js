@@ -14,6 +14,7 @@ function setupMenu (node, meta) {
     .add(dx.detached('a').class('docs-dropdown-link').attr('href', '/guide/core-concepts/').text('Core concepts'))
     .add(dx.detached('a').class('docs-dropdown-link').attr('href', '/guide/printing/').text('Printing'))
     .add(dx.detached('a').class('docs-dropdown-link').attr('href', '/examples/').text('Examples'))
+    .add(dx.detached('a').class('docs-dropdown-link').attr('href', '/themes/').text('Themes'))
     // .add(dx.detached('h3').text('Design patterns'))
     // .add(dx.detached('a').class('docs-dropdown-link').attr('href', '/guide/general-guidelines/').text('General guidelines'))
     // .add(dx.detached('a').class('docs-dropdown-link').attr('href', '/guide/page-layout/').text('Page layout'))

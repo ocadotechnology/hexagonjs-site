@@ -9,7 +9,7 @@
   "main": "./build/index.js",
   "scripts": {
     "postinstall": "node build/index.js postinstall",
-    "start": "node build/index.js",
+    "start": "node build/demo.js && node build/index.js",
     "clean": "rm -r target; true",
     "build-all": "node build/index.js build-all",
     "build-examples": "node build/buildexamples.js",
