@@ -1,7 +1,6 @@
 var quantum = require('./quantum')
 var version = require('./version')
-var template = require('quantum-template')
-var changelog = require('quantum-changelog')
+var template = require('./template')
 
 var hexagon = require('hexagon-js')
 
@@ -13,7 +12,6 @@ var versions = require('../content/versions.json')
 
 var Progress = require('progress')
 var chalk = require('chalk')
-var watch = require('quantum-watch')
 var flatten = require('flatten')
 var liveServer = require('live-server')
 
@@ -174,7 +172,7 @@ function convertToNewFormat (objs) {
         .then(version(options.versionOptions))
         .map((x) => quantum.stringify(quantum.select(x).select('api').content, options.versionOptions))
         .map(function (qString) {
-          return fs.outputFileAsync(path.join('new_format', module +'/api.um'), qString)
+          return fs.outputFileAsync(path.join('content/docs', module +'/api/auto.um'), qString)
         })
     })
   })
